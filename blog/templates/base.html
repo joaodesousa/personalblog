@@ -1,0 +1,108 @@
+{% load static %}
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="{% static 'blog/assets/img/favicon.png' %}">
+  <title>João de Sousa - {% block title %} {% endblock %}</title>
+
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="{% static 'blog/assets/css/nucleo-icons.css' %}" rel="stylesheet" />
+  <link href="{% static 'blog/assets/css/nucleo-svg.css' %}" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="{% static 'blog/assets/css/font-awesome.css' %}" rel="stylesheet" />
+  <link href="{% static 'blog/assets/css/nucleo-svg.css' %}" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="{% static 'blog/assets/css/argon-design-system.css' %}" rel="stylesheet" />
+</head>
+
+<body class="sections-page">
+      <header class="header-2 skew-separator">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-absolute">
+          <div class="container">
+            <div class="navbar-translate">
+              <a class="navbar-brand" href="{% url 'home' %}">João de Sousa</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#example-header-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="example-header-2">
+              <div class="navbar-collapse-header">
+                <div class="row">
+                  <div class="col-6 collapse-brand">
+                    <a>
+                      
+                    </a>
+                  </div>
+                  <div class="col-6 collapse-close text-right">
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#example-header-2" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <ul class="nav navbar-nav ml-lg-auto">
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://twitter.com/ojoaodesousa">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://www.facebook.com/ojoaodesousa">
+                    <i class="fab fa-facebook-square"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://www.instagram.com/ojoaodesousa">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="page-header" style="min-height: 45vh;">
+          <div class="page-header-image" style="background-image: url('{% static 'blog/assets/img/home.jpg' %}'); opacity: 0.85;"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 mx-auto text-center">
+                <img src="{% static 'blog/assets/img/logo_w.png' %}" width="40%">
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+  {% block content%}
+  {% endblock %}
+
+
+
+<footer class="footer footer-simple">
+            <div class="container">
+              <div class="copyright">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>, Proudly Coded by <a href="https://www.joaodesousa.com" target="_blank" class="copyright-link">João de Sousa</a>.
+              </div>
+            </div>
+          </footer>
+  {% block js %}
+  <!-- Scripts -->
+
+  <!-- Core -->
+  <script src="{% static 'blog/assets/js/core/jquery.min.js' %}"></script>
+  <script src="{% static 'blog/assets/js/core/popper.min.js' %}"></script>
+  <script src="{% static 'blog/assets/js/core/bootstrap.min.js' %}"></script>
+  {% endblock %}
+
+
+
+</body>
+
+</html>
