@@ -1,19 +1,39 @@
-  {% extends "base.html" %}
+  {% extends "base_detail.html" %}
   {% block title %}Blog{% endblock title %}
+  {% block opengraph %}
+  <meta property="og:title"              content="{{post.title}}" />
+  <meta property="og:description"        content="{{post.byline}}" />
+  <meta property="og:image"              content="{{post.image.url}}" />
+  {% endblock opengraph%}
   {% block content %}
+  {% load static %}
 
   <div class="wrapper">
-
     <section class="section">
       <div class="container">
         <div class="row">
           <div class="col-md-10 ml-auto mr-auto">
             <h6 class="category">{{post.created_on}}</h6>
-            <h3 class="title">{{post.title}}</h3>
-            <p class="text-justify">{{post.text}}</p>
+            <h2 class="display-3">{{post.title}}</h2>
+            <p class="lead text-muted"><small>{{post.byline}}</small></p>
           </div>
         </div>
-      </div>
+            <div class="row align-items-center mt--3">
+              <div class="col-md-3 text-lg-right">
+                <!-- Avatar -->
+                  <img src="{% static 'blog/assets/img/1448278.jpg' %}" style="filter: grayscale(100%); -webkit-filter: grayscale(100%);" width="60%">
+              </div>
+              <div class="col-md-9 mt-6">
+                <h3 class="heading">João de Sousa</h3>
+                <p class="text-muted">Presidente da Associação Juvenil de Lousada e Vice-Presidente da Federação Nacional dos <br>Estudos Europeus</p>
+              </div>
+            </div>
+            <div class="border-bottom mb-3 ml-6 mr-6"></div>
+        <div class="row">
+          <div class="col-md-12 ml-auto mr-auto">
+            {{post.text|safe}}
+          </div>
+          </div>
     </section>
   </div>
   {%endblock%}

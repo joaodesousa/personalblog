@@ -18,6 +18,10 @@
   <link href="{% static 'blog/assets/css/nucleo-svg.css' %}" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="{% static 'blog/assets/css/argon-design-system.css' %}" rel="stylesheet" />
+  <!-- OpenGraph -->
+  <meta property="og:title"              content="João de Sousa" />
+  <meta property="og:description"        content="Estava tudo à espera de uma coisa em condições." />
+  <meta property="og:image"              content="{% static 'blog/assets/img/featured.png' %}" />
 </head>
 
 <body class="sections-page">
@@ -83,12 +87,11 @@
 
 
 
-<footer class="footer footer-simple">
+
+<footer class="footer bg-white footer-simple">
             <div class="container">
               <div class="copyright">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>, Proudly Coded by <a href="https://www.joaodesousa.com" target="_blank" class="copyright-link">João de Sousa</a>.
+                <p>Made with a ⌨️ and ☕ by <a href="https://joaodesousa.com">João de Sousa</a>.
               </div>
             </div>
           </footer>

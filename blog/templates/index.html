@@ -15,7 +15,7 @@
                     <a href="{% url 'post_detail' post.slug  %}">
                         <div class="card-body">
                             <div class="content-bottom">
-                                <h6 class="card-category text-white opacity-8">{{post.created_on}}</h6>
+                                <h6 class="card-category text-white opacity-8">{{post.created_on|date:"d F, Y"}}</h6>
                                 <h5 class="card-title">{{post.title}}</h5>
                             </div>
                         </div>
